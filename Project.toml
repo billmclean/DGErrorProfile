@@ -1,0 +1,13 @@
+name = "DGError"
+uuid = "d085f210-be33-4179-bc8e-7f8ee15ea3a8"
+authors = ["William McLean <w.mclean@unsw.edu.au>"]
+version = "0.1.0"
+
+[deps]
+ArgCheck = "dce04be8-c92d-5529-be00-80e4d2c0e197"
+FractionalTimeDG = "74b2d96b-41ff-44fe-90c4-fb8dc9918b5a"
+GaussQuadrature = "d54b0c1a-921d-58e0-8e36-89d8069c0969"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
