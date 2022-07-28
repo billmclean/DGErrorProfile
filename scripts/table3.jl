@@ -1,6 +1,7 @@
 using Printf
-import DGError.Utils1D: print_table
-import DGError.General_1D: L, max_t, κ, initial_data, source_func, exact_soln
+import DGErrorProfile.Utils1D: print_table
+import DGErrorProfile.General_1D: L, max_t, κ, initial_data, source_func, 
+                                  exact_soln
 
 nt = Threads.nthreads()
 if nt > 1
