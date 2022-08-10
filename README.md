@@ -1,6 +1,6 @@
 # DGErrorProfile
-Code for the paper "Error Profile for Discontinuous Galerkin Time 
-Stepping of Parabolic PDE"
+Code for the paper [Error Profile for Discontinuous Galerkin Time 
+Stepping of Parabolic PDE](https://arxiv.org/abs/2208.03846).
 
 The tables and figures in the paper can be generated using the scripts
 `table1.jl`, ..., `table4.jl` and `figure1.jl`, ..., `figure3.jl` in
