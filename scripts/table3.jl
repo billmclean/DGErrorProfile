@@ -10,9 +10,9 @@ end
 
 r = 3
 Nx = 500
-Gauss_pts = 5
+Gauss_pts = 10
 #pts_per_interval = 10
-pts_per_interval = 2
+pts_per_interval = 5
 nrows = 5
 cutoff = false
 

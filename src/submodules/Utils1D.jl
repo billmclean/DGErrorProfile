@@ -90,6 +90,7 @@ function print_table(cutoff::Bool, r::Integer, nrows::Integer,
         α = r - 5/4
         αstar = r + 1 - 5/4
         αnode = 2r - 1- 5/4
+	@printf("\tα = %g, α star = %g, α node = %g\n", α, αstar, αnode)
     end
     @printf("\n%4s  %6s  %17s  %17s  %17s\n\n",
             "Nt", "Nx", "DG error    ", "Reconstr. error ", "Nodal error   ")
@@ -113,9 +114,10 @@ function print_table(cutoff::Bool, r::Integer, nrows::Integer,
             err_node[row] = maximum(pcwise_Ustar_err[end,n_min:Nt])
 	else
             pcwise_wt = min.(pcwise_t, 1.0)
-            err[row] = maximum(pcwise_wt.^α.* pcwise_err)
-            err_Ustar[row] = maximum(pcwise_wt.^αstar .* pcwise_Ustar_err)
-            err_node[row] = maximum(pcwise_wt[end,:].^αnode .*
+	    err[row] = maximum(pcwise_wt.^α.* pcwise_err)
+	    err_Ustar[row] = maximum(pcwise_wt[:,2:Nt].^αstar .* 
+				     pcwise_Ustar_err[:,2:Nt])
+	    err_node[row] = maximum(pcwise_wt[end,:].^αnode .*
                                     pcwise_Ustar_err[end,:])
 
 	end
